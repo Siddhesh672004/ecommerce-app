@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./Products.module.css";
 
@@ -21,21 +22,23 @@ const Products = () => {
   return (
     <>
       <div>
-        <h2>Products</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
           <div className={styles.productList}>
             {products.map((product) => (
               <div key={product.id} className={styles.productCard}>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className={styles.productImage}
-                />
-                <h3>{product.title}</h3>
-                <p>{product.description}</p>
-                <p>Price: ${product.price}</p>
+                <Link to={`/product/${product.id}`}>
+                  {" "}
+                  {/* Updated Link */}
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className={styles.productImage}
+                  />
+                  <h3>{product.title}</h3>
+                  <p>Price: ${product.price}</p>
+                </Link>
               </div>
             ))}
           </div>
