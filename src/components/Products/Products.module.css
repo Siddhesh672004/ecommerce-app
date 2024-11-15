@@ -2,11 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   
   .productCard {
-    width: 250px;
+    flex: 1 1 calc(25% - 20px); /* Each product takes up 25% of the row minus the gap */
+    max-width: calc(25% - 20px); /* Ensures it doesn’t exceed the width */
+    box-sizing: border-box; /* Includes padding and border in width calculation */
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -21,7 +23,7 @@
   
   .productImage {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-radius: 5px;
   }
@@ -31,6 +33,16 @@
     margin: 10px 0;
     color: #333;
   }
+
+  .productCard a {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Ensures the link text inherits the parent's color */
+  }
+  
+  .productCard a:hover {
+    text-decoration: none; /* Keeps the link text without underline on hover */
+  }
+  
   
   .productCard p {
     font-size: 1em;
