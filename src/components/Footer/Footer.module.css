@@ -8,4 +8,5 @@
     align-items: center;
     position: relative; /* Change from absolute to relative */
     bottom: 0;
+    background: #000;
 }

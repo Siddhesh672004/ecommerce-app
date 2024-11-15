@@ -1,5 +1,5 @@
 // ProductDetail.jsx
-import { useParams } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "./ProductDetail.module.css"; // Ensure you have this CSS file
 
