@@ -1,13 +1,19 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className="mb-4">
-      <Navbar bg="primary" data-bs-theme="dark">
+      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand >Todo App</Navbar.Brand>
-          <Nav className="me-auto">
-          </Nav>
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/Products">Products</Nav.Link>
+              <Nav.Link href="#pricing">About Us</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </header>

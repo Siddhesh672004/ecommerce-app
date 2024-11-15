@@ -8,7 +8,7 @@ import Carousel3 from '../../assets/Carousel3.jpg';
 const Slider = () => {
   return (
     <>
-        <Carousel>
+        <Carousel className="m-4">
         <Carousel.Item interval={2000} className={styles.carouselContainer} >
           <img src={Carousel1} alt="First slide"  className={styles.carouselImage}/>
           <Carousel.Caption>
