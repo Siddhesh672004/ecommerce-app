@@ -1,0 +1,15 @@
+.carouselContainer {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 500px; /* Matches the fixed height of the carousel */
+    width: 100%;
+  }
+  
+  .carouselImage {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%; /* Standard width for horizontal images */
+    height: 100%; /* Matches the container height */
+    object-fit: cover; /* Ensures the image fits perfectly */
+  }
+  

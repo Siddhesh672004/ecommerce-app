@@ -1,0 +1,5 @@
+.main-content {
+    min-height: calc(100vh - 50px); /* Ensures content area fills the viewport */
+    padding-bottom: 50px; /* Leaves space for the footer */
+    box-sizing: border-box;
+}
